@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "f24eb2de-0dfc-4d34-8431-0a67998e65c2",
+		"name": "Bank Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products by client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankProduct/byClient/638e04b944c0f53635d3a496",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankProduct",
+						"byClient",
+						"638e04b944c0f53635d3a496"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankProduct/byDate/credit/2022-01-01/2022-12-31",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankProduct",
+						"byDate",
+						"credit",
+						"2022-01-01",
+						"2022-12-31"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "932b9020-b554-4055-b7a0-077fb386201f",
+		"name": "Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"JD 3\",\r\n        \"email\": \"email3@gmail.com\",\r\n        \"phone\": \"987654321\",\r\n        \"document\": \"12347790\",\r\n        \"type\": \"business\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

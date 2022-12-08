@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "71ab0a37-baaa-45a3-8f82-627d735bab6b",
+		"name": "Debt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/bankDebt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankDebt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 120.0,\r\n    \"balance\": 120.0,\r\n    \"paymentDate\": \"2022-11-05\",\r\n    \"customerId\": \"638ec7e98aaec7ac9ed59b31\",\r\n    \"creditId\": \"638043bc9c8cfe3387adfb51\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bankDebt/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankDebt",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6380443b296f9b876f839dd0\",\r\n    \"amount\": 1200.0,\r\n    \"balance\": 1100.0,\r\n    \"paymentDate\": \"2022-11-05\",\r\n    \"customerId\": \"638ec7e98aaec7ac9ed59b31\",\r\n    \"creditId\": \"638043bc9c8cfe3387adfb51\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bankDebt/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankDebt",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "debtByCustomerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/bankDebt/debtByCustomerId/638ec7e98aaec7ac9ed59b31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankDebt",
+						"debtByCustomerId",
+						"638ec7e98aaec7ac9ed59b31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payDebt",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"debtId\": \"6380443b296f9b876f839dd0\",\r\n    \"amount\": \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bankDebt/payDebt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankDebt",
+						"payDebt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

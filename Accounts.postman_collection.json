@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "44d9a431-219a-4cd4-9c3c-4bb1dcea0e06",
+		"name": "Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Make primary account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/card/associatePrimaryAccount/638e1eab1fe3a5292ceac385",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card",
+						"associatePrimaryAccount",
+						"638e1eab1fe3a5292ceac385"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Associate account to card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/bankAccount/associate/638e1e971fe3a5292ceac384/638e2a5282a74f71937756f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"associate",
+						"638e1e971fe3a5292ceac384",
+						"638e2a5282a74f71937756f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account without validations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numberAccount\": \"1111222233339999\",\r\n        \"amount\": 1000.0,\r\n        \"endDate\": \"28/11/2027\",\r\n        \"customerId\": \"63854a7ebff6ad5c4dc86ba0\",\r\n        \"customerName\": \"JD 3\",\r\n        \"type\": \"Cuenta Corriente\",\r\n        \"numberOfTransactions\": 0,\r\n        \"commission\": 5,\r\n        \"transactionLimit\": 15,\r\n        \"creationDate\": \"28-11-2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankAccount/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankAccount/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Accounts by Card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankAccount/findAccounts/638e2a5282a74f71937756f3",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"findAccounts",
+						"638e2a5282a74f71937756f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register account with validation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numberAccount\": \"1111222233335555\",\r\n        \"amount\": 700,\r\n        \"endDate\": \"2027-12-06\",\r\n        \"customerId\": \"638e04b944c0f53635d3a496\",\r\n        \"type\": \"638e1d041fe3a5292ceac381\",\r\n        \"numberOfTransactions\": 0,\r\n        \"commission\": 5,\r\n        \"transactionLimit\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankAccount/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Do a deposit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"638e1e861fe3a5292ceac383\",\r\n    \"amount\" : 400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankAccount/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Do a withdrawl",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"638e1e861fe3a5292ceac383\",\r\n    \"amount\" : 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankAccount/withdrawl",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"withdrawl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Do a transfer between accounts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionDate\" : \"2022-12-05\",\r\n    \"senderAccountId\" : \"638e1eab1fe3a5292ceac385\",\r\n    \"receptorAccountId\" : \"638e1e971fe3a5292ceac384\",\r\n    \"amount\" : 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankAccount/tba",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"tba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay a credit with debit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionDate\" : \"2022-12-05\",\r\n    \"senderAccountId\" : \"638e1e861fe3a5292ceac383\",\r\n    \"receptorCreditId\" : \"638e33333d125635f969545a\",\r\n    \"amount\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankAccount/tpt",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"tpt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new type of account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"3\",\r\n  \"name\": \"Cuenta corriente\",\r\n  \"isCommission\": \"false\",\r\n  \"isLimit\": \"true\",\r\n  \"limit\": \"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/accountType/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accountType",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the types of account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/accountType/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accountType",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account by client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankAccount/accountByCustomerId/638e04b944c0f53635d3a496",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankAccount",
+						"accountByCustomerId",
+						"638e04b944c0f53635d3a496"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make primary account with KAFKA",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/card/associatePrimaryAccountKafka/638e1eab1fe3a5292ceac385",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card",
+						"associatePrimaryAccountKafka",
+						"638e1eab1fe3a5292ceac385"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "a52d8583-d2bb-454b-92bb-73f5269e0756",
+		"name": "Boot Coin Selling Tickets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get selling tickets",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create selling ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"bootCoinPurchaseId\": \"6390e5d052e262233031cfe6\",\r\n        \"sellerAccount\": \"638f69ac8dd0724d06a35072\",\r\n        \"bootCoinBuyerPurseId\": \"6390e5d052e262233031cfe6\",\r\n        \"bootCoinSellerPurseId\": \"63913e19924c2035d579f69b\",\r\n        \"amountToPay\": 150.0,\r\n        \"soldBootCoinAmount\": 50.0,\r\n        \"payed\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bootcoinsellingticket",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinsellingticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay Ticket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bootcoinsellingticket/payTicket/6390e5d052e262233031cfe6",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinsellingticket",
+						"payTicket",
+						"6390e5d052e262233031cfe6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

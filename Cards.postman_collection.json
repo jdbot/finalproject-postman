@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "4323d2a8-1b2d-4e23-884a-80c69786f644",
+		"name": "Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Make payment with card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/card/payWithDebitCard/638e2a5282a74f71937756f3/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card",
+						"payWithDebitCard",
+						"638e2a5282a74f71937756f3",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/card",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardType\": \"debit\",\r\n    \"cardNumber\": \"4232355644443333\",\r\n    \"creationDate\": \"2022-12-06\",\r\n    \"expirationDate\": \"2027-12\",\r\n    \"securityCode\": \"420\",\r\n    \"clientId\": \"638f693f73e0c45ae1cab55c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/card",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get amount of primary account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/card/primaryAccount/638e2a5282a74f71937756f3",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card",
+						"primaryAccount",
+						"638e2a5282a74f71937756f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update cards",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"638f777efe79615178da7994\",\r\n        \"cardType\": \"debit\",\r\n        \"cardNumber\": \"4232355644443333\",\r\n        \"creationDate\": \"2022-12-06\",\r\n        \"expirationDate\": \"2027-12\",\r\n        \"securityCode\": \"420\",\r\n        \"primaryAccountId\": null,\r\n        \"clientId\": \"638f693f73e0c45ae1cab55c\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/card",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

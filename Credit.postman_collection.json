@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "645307bd-ba29-4d0c-aba4-2d6baf29374c",
+		"name": "Credit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Charge credit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"638e33333d125635f969545a\",\r\n    \"amount\" : 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankCredit/chargecredit",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankCredit",
+						"chargecredit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay credit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"638e33333d125635f969545a\",\r\n    \"amount\" : 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankCredit/paycredit",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankCredit",
+						"paycredit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get credit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankCredit",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankCredit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberCredit\" : \"233245454\",\r\n    \"amount\" : 2000,\r\n    \"credit\" : 2000,\r\n    \"startDate\" : \"2022-12-05\",\r\n    \"endDate\" : \"2027-12-05\",\r\n    \"paymentDate\" : \"2027-12-05\",\r\n    \"customerId\" : \"638a5d6e5968997b3866f062\",\r\n    \"customerName\" : \"JD 1\",\r\n    \"type\" : \"personal\",\r\n    \"creationDate\" : \"2022-12-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/bankCredit/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankCredit",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Credits by customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bankCredit/creditByCustomerId/638a5d6e5968997b3866f062",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bankCredit",
+						"creditByCustomerId",
+						"638a5d6e5968997b3866f062"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

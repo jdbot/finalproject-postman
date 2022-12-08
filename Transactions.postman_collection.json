@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "f24fb9ee-eb4b-4a5c-bd25-c3d8f5c81df7",
+		"name": "Transactions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Amount average report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/transaction/client/638e04b944c0f53635d3a496",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"transaction",
+						"client",
+						"638e04b944c0f53635d3a496"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comissions Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/transaction/commissionByAccount/638e1eab1fe3a5292ceac385/2022-01-01/2022-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"transaction",
+						"commissionByAccount",
+						"638e1eab1fe3a5292ceac385",
+						"2022-01-01",
+						"2022-12-31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get 10 latest transaction from card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/transaction/card/638e2a5282a74f71937756f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"transaction",
+						"card",
+						"638e2a5282a74f71937756f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/transaction/account/638e1e861fe3a5292ceac383",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"transaction",
+						"account",
+						"638e1e861fe3a5292ceac383"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

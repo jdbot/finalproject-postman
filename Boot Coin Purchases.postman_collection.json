@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "363e18b8-c006-4a10-87d0-ba9bd47dccfc",
+		"name": "Boot Coin Purchases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Boot coin purchases",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create bootcoin purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/bootcoinpurchase",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinpurchase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

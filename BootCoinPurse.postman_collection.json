@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "124d1857-8941-47c9-a584-30023807f83b",
+		"name": "BootCoinPurse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Bootcoinpurse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/bootcoinpurse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinpurse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a bootcoinpurse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idDocument\" : \"32456777\",\r\n    \"phoneNumber\" : \"9876543210\",\r\n    \"email\" : \"bootcoinseller@gmail.com\",\r\n    \"bootCoinAmount\" : 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bootcoinpurse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinpurse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy boot coin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bootCoinPurchaseAmount\" : 50,\r\n    \"bootCoinPurseId\" : \"6390e5d052e262233031cfe6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bootcoinpurse/publishbootcoinpurchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinpurse",
+						"publishbootcoinpurchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell boot coin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bootCoinPurchaseId\" : \"\" ,\r\n    \"sellerAccount\" : \"\",\r\n    \"bootCoinSellerPurseId\" : \"\",\r\n    \"bootCoinBuyerPurseId\": \"\",\r\n    \"amountToPay\" : 150,\r\n    \"soldBootCoinAmount\" : 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bootcoinpurse/sellbootcoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinpurse",
+						"sellbootcoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bootCoinPurchaseAmount\" : 50,\r\n    \"bootCoinPurseId\" : \"6390e5d052e262233031cfe6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/bootcoinpurse/publishbootcoinpurchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"bootcoinpurse",
+						"publishbootcoinpurchase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
